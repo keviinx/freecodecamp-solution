@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC: Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<nav id="navbar">
+  <header>Pop!_OS Documentation</header>
+  <ul>
+    <li><a class="nav-link" href="#Install_Pop!_OS_On_Your_System76_Computer">Install Pop!_OS On Your System76 Computer</a></li>
+    <li><a class="nav-link" href="#Make_Bootable_Drive">Make Bootable Drive</a></li>
+    <li><a class="nav-link" href="#Installing_Pop!_OS">Installing Pop!_OS</a></li>
+    <li><a class="nav-link" href="#Full_Disk_Encryption">Full Disk Encryption</a></li>
+    <li><a class="nav-link" href="#NVIDIA_Graphics">NVIDIA Graphics</a></li>
+    <li><a class="nav-link" href="#Change_the_Desktop_Environment">Change the Desktop Environment</a></li>
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="Install_Pop!_OS_On_Your_System76_Computer">
+    <header>Install Pop!_OS On Your System76 Computer</header>
+    <p>
+      The following guide describes how to download the Pop!_OS.iso image, write it to a flash drive, and install it on the hardware of your choice.
+    </p>
+    <p>
+      Requirements: At the time of this writing Pop!_OS only runs on 64-bit x86 architecture, 2 GB of RAM is required, 4 GB of RAM is recommended and 20 GB of storage is recommended.
+    </p>
+  </section>
+  <section class="main-section" id="Make_Bootable_Drive">
+    <header>Make Bootable Drive</header>
+    <p>
+      Please see our instructions for making and booting from a live disk of Pop!_OS <a href="http://support.system76.com/articles/live-disk/">here</a>.
+    </p>
+  </section>
+  <section class="main-section" id="Installing_Pop!_OS">
+    <header>Installing Pop!_OS</header>
+    <p>
+      The first step after booting from your new live disk is to select your language:
+    </p>
+    <p>
+      Next we will select the keyboard layout for our setup and region:
+    </p>
+    <p>
+      Now we can choose to install Pop!_OS or to try Demo Mode to learn your new desktop before installing:
+    </p>
+    <p>
+      We can select to erase the currently installed operating system and install Pop!_OS on the selected drive. To the left we can choose Custom Partitioning if you need to Dual Boot or want to have a separate Home partition or place the /tmp partition on a different drive:
+    </p>
+  </section>
+  <section class="main-section" id="Full_Disk_Encryption">
+    <header>Full Disk Encryption</header>
+    <p>
+      You can choose to encrypt your drive or to not encrypt your drive. If you would like to encrypt the drive then push the <b>Choose Password</b> button, if you don’t want to encrypt click the <b>Don’t Encrypt</b> button:
+    </p>
+    <p>
+      At this step you choose the password that will be used to encrypt your drive and it will be requested every time the system boots:
+    </p>
+    <p>
+      Now Pop!_OS will begin installing!
+    </p>
+    <p>
+      Pop!_OS has been successfully installed on your computer! Awesome work! You can choose to reboot your computer to create your new user for the OS or you can shut down and setup the new user later:
+    </p>
+  </section>
+  <section class="main-section" id="NVIDIA_Graphics">
+    <header>NVIDIA Graphics</header>
+    <p>
+      If you installed from the Intel/AMD ISO and your system has discrete NVIDIA graphics card or if you added one later on, you will need to manually install the drivers for your card to get the optimum performance. Please run the following command in a command terminal to install the driver:
+    </p>
+    <p>
+      <code>sudo apt install system76-driver-nvidia</code>
+    </p>
+  </section>
+  <section class="main-section" id="Change_the_Desktop_Environment">
+    <header>Change the Desktop Environment</header>
+    <p>
+      Pop!_OS and Ubuntu both include the GNOME desktop environment by default. A desktop environment is responsible for the look and feel of the graphical desktop, and includes many of the key programs that get used every day.
+    </p>
+    <p>
+      You can install an alternative desktop environment using the instructions below. If you run into trouble while using an alternative desktop environment, you may wish to revert to the default environment. To ensure the default GNOME desktop environment is installed in Pop!_OS, install the <code>pop-desktop</code> package:
+    </p>
+    <p>
+      <code>
+        sudo apt install pop-desktop
+      </code>
+    </p>
+    <p>
+      For Ubuntu, install the <code>ubuntu-desktop</code> package instead:
+    </p>
+    <p>
+      <code>
+        sudo apt install ubuntu-desktop
+      </code>
+    </p>
+    <p>
+      The desktop environment is basically the top graphical layer of the OS. The desktop environment is launched by a display manager; Pop!_OS and Ubuntu both use GDM (GNOME Display Manager) by default.
+    </p>
+    <p>
+      If multiple desktop environments are installed, GDM will display a gear icon, which will allow you to select the desktop environment you want to launch. You will need to either reboot or restart your display manager using <code>sudo systemctl restart gdm</code> before a newly-installed desktop environment will show up in the list of options.
+    </p>
+    <p>
+      Some of the desktop environment that can be installed on Pop!_OS are listed below:
+      <ul>
+        <li>MATE</li>
+        <li>Cinnamon</li>
+        <li>GNOME</li>
+        <li>KDE Plasma</li>
+        <li>UKUI</li>
+    </ul>
+    </p>
+  </section>
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

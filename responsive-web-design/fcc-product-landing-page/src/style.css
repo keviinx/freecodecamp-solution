@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+
+header{
+  display:flex;
+  position:fixed;
+}
