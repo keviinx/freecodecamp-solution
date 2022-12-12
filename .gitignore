@@ -8,9 +8,6 @@ __pycache__/
 
 # Environments
 venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Replit stuffs
 .replit
