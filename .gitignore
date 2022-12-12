@@ -3,12 +3,20 @@ __pycache__/
 # generated pyc files
 *.pyc
 
+# Unit test / coverage reports
+.cache
 
 # Environments
-.env
-.venv
-env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Replit stuffs
+.replit
+replit_zip_error_log.txt
+replit.nix
+
+# Hidden folders
+.config
+.upm
