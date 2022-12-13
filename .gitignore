@@ -17,3 +17,6 @@ replit.nix
 # Hidden folders
 .config
 .upm
+
+# VSCode generated
+.vscode/*
