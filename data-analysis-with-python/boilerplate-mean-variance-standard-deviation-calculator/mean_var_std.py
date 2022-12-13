@@ -1,62 +1,69 @@
+"""
+Mean-Variance-Standard Deviation Calculator
+Takes a list and convert it to 3x3 numpy array and then give out mean, variance, standard deviation,
+min and max.
+"""
+
 import numpy as np
 
 
-def calculate(list):
-
-  if len(list) != 9:
-    raise ValueError("List must contain nine numbers.")
-
-  else:
+def calculate(list):  # pylint: disable=redefined-builtin
+    """Converts to 3x3 numpy array and then calculate"""
+    if len(list) != 9:
+        raise ValueError("List must contain nine numbers.")
 
     # Create a numpy array with 3x3 dimension
     np_list = np.array(list).reshape((3, 3))
 
     # for the mean
-    mean_axis_1 = np.mean(np_list, axis=0).tolist()
-    mean_axis_2 = np.mean(np_list, axis=1).tolist()
-    mean_flattened = np.mean(np_list)
-    mean = [mean_axis_1, mean_axis_2, mean_flattened]
+    np_list_mean = [
+        np.mean(np_list, axis=0).tolist(),
+        np.mean(np_list, axis=1).tolist(),
+        np.mean(np_list),
+    ]
 
     # for the variance
-    variance_axis_1 = np.var(np_list, axis=0).tolist()
-    variance_axis_2 = np.var(np_list, axis=1).tolist()
-    variance_flattened = np.var(np_list)
-    variance = [variance_axis_1, variance_axis_2, variance_flattened]
+    np_list_variance = [
+        np.var(np_list, axis=0).tolist(),
+        np.var(np_list, axis=1).tolist(),
+        np.var(np_list),
+    ]
 
     # for standard deviation
-    standard_deviation_axis_1 = np.std(np_list, axis=0).tolist()
-    standard_deviation_axis_2 = np.std(np_list, axis=1).tolist()
-    standard_deviation_flattened = np.std(np_list)
-    standard_deviation = [
-      standard_deviation_axis_1, standard_deviation_axis_2,
-      standard_deviation_flattened
+    np_list_standard_deviation = [
+        np.std(np_list, axis=0).tolist(),
+        np.std(np_list, axis=1).tolist(),
+        np.std(np_list),
     ]
 
     # for the max
-    max_axis_1 = np_list.max(axis=0).tolist()
-    max_axis_2 = np_list.max(axis=1).tolist()
-    max_flattened = np_list.max()
-    max = [max_axis_1, max_axis_2, max_flattened]
+    np_list_max = [
+        np_list.max(axis=0).tolist(),
+        np_list.max(axis=1).tolist(),
+        np_list.max(),
+    ]
 
     # for the min
-    min_axis_1 = np_list.min(axis=0).tolist()
-    min_axis_2 = np_list.min(axis=1).tolist()
-    min_flattened = np_list.min()
-    min = [min_axis_1, min_axis_2, min_flattened]
+    np_list_min = [
+        np_list.min(axis=0).tolist(),
+        np_list.min(axis=1).tolist(),
+        np_list.min(),
+    ]
 
     # for the sum
-    sum_axis_1 = np.sum(np_list, axis=0).tolist()
-    sum_axis_2 = np.sum(np_list, axis=1).tolist()
-    sum_flattened = np.sum(np_list)
-    sum = [sum_axis_1, sum_axis_2, sum_flattened]
+    np_list_sum = [
+        np.sum(np_list, axis=0).tolist(),
+        np.sum(np_list, axis=1).tolist(),
+        np.sum(np_list),
+    ]
 
     calculations = {
-      'mean': mean,
-      'variance': variance,
-      'standard deviation': standard_deviation,
-      'max': max,
-      'min': min,
-      'sum': sum
+        "mean": np_list_mean,
+        "variance": np_list_variance,
+        "standard deviation": np_list_standard_deviation,
+        "max": np_list_max,
+        "min": np_list_min,
+        "sum": np_list_sum,
     }
 
     return calculations
